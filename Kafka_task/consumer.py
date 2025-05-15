@@ -1,21 +1,16 @@
 from kafka import KafkaConsumer
 
 def consume_hello_world(bootstrap_servers, topic_name):
-    """
-    Consumes messages from the specified Kafka topic and prints them.
+    #Consumes messages from the specified Kafka topic and prints them at terminal.
 
-    Args:
-        bootstrap_servers (str): Comma-separated list of Kafka broker addresses (e.g., 'localhost:9092').
-        topic_name (str): The name of the Kafka topic to consume messages from (e.g., 'ABC').
-    """
     try:
         consumer = KafkaConsumer(
             topic_name,
             bootstrap_servers=bootstrap_servers,
-            auto_offset_reset='earliest',  # Start consuming from the beginning of the topic if no previous offset is found
+            auto_offset_reset='earliest',  # Start consuming from the beginning of the topic
             enable_auto_commit=True,
             group_id='my-consumer-group',  # Assign a consumer group ID
-            value_deserializer=lambda x: x.decode('utf-8')  # Deserialize message value from bytes to string
+            value_deserializer=lambda x: x.decode('utf-8')
         )
 
         print(f"Consumer listening for messages on topic '{topic_name}'...")

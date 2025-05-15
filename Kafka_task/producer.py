@@ -1,7 +1,7 @@
 from kafka import KafkaProducer
 
 def send_hello_world(bootstrap_servers, topic_name):
-    #Sends the message "HELLO WORLD" to the specified Kafka topic.
+    #Sends the message "Hello World" to the specified Kafka topic.
 
     try:
         producer = KafkaProducer(bootstrap_servers=bootstrap_servers)
