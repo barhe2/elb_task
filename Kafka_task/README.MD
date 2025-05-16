@@ -29,10 +29,10 @@ This section describes how to set up Kafka (using Docker) and run the publisher 
 
 ### Running the Publisher Script
 
-1.  Activate "kafka_venv" with the following command:
+1.  Activate "kafka_venv" with the following command (Choose your OS):
 
 **Linux/Mac : source kafka_venv/bin/activate**
-****Windows : source kafka_venv/Scripts/activate**
+**Windows : source kafka_venv/Scripts/activate**
 
 2.  **Change diractory** into "scripts" with **cd /scripts**
 
@@ -44,10 +44,10 @@ This section describes how to set up Kafka (using Docker) and run the publisher 
 
 ### Running the Consumer Script
 
-1.  Activate "kafka_venv" with the following command:
+1.  Activate "kafka_venv" with the following command (Choose your OS):
 
 **Linux/Mac : source kafka_venv/bin/activate**
-****Windows : source kafka_venv/Scripts/activate**
+**Windows : source kafka_venv/Scripts/activate**
 
 2.  **Change diractory** into "scripts" with **cd /scripts**
 
