@@ -33,7 +33,9 @@ This section describes how to set up Kafka (using Docker) and run the publisher 
 # Linux/Mac : source kafka_venv/bin/activate
 # Windows : source kafka_venv/Scripts/activate
 
-2.  **Run the publisher script:** Execute the script using the Python interpreter:
+2.  **Move into "scripts" folder with # cd scripts
+
+3.  **Run the publisher script:** Execute the script using the Python interpreter:
 
     python3 producer.py
 
@@ -45,7 +47,9 @@ This section describes how to set up Kafka (using Docker) and run the publisher 
 # Linux/Mac : source kafka_venv/bin/activate
 # Windows : source kafka_venv/Scripts/activate
 
-2.  **Run the consumer script:** Execute the script using the Python interpreter:
+2.  **Move into "scripts" folder with # cd scripts
+
+3.  **Run the consumer script:** Execute the script using the Python interpreter:
 
     python3 consumer.py
 
