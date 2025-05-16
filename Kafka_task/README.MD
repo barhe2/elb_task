@@ -53,4 +53,5 @@ This section describes how to set up Kafka (using Docker) and run the publisher 
 
     python3 consumer.py
 
-    This script will connect to the Kafka broker and start listening for messages on the "ABC" topic. Any messages sent by the publisher will be printed to the console.
+    This script will connect to the Kafka broker and start listening for messages on the "ABC" topic. 
+    The messages sent by the publisher will be printed to the console.
