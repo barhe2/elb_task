@@ -1,14 +1,17 @@
 from kafka import KafkaProducer
+import time
 
-def send_hello_world(bootstrap_servers, topic_name):
-    #Sends the message "Hello World" to the specified Kafka topic.
+kafka_brokers = 'localhost:9092'  # Kafka broker address here is for local testing only
+topic = 'ABC'
 
+def send_message(bootstrap_servers, topic_name):
     try:
         producer = KafkaProducer(bootstrap_servers=bootstrap_servers)
         message = "Hello World".encode('utf-8')
         for i in range(10):
             producer.send(topic_name, message)
-            producer.flush()  # Wait for all messages to be sent
+            producer.flush()
+            time.sleep(0.1)  # Add a small delay
         print(f"Message 'Hello World' sent successfully to topic '{topic_name}'")
     except Exception as e:
         print(f"Error sending message: {e}")
@@ -17,6 +20,4 @@ def send_hello_world(bootstrap_servers, topic_name):
             producer.close()
 
 if __name__ == "__main__":
-    kafka_brokers = 'localhost:9092'  # Replace with your Kafka broker address if different
-    topic = 'ABC'
-    send_hello_world(kafka_brokers, topic)
+    send_message(kafka_brokers, topic)

@@ -1,15 +1,18 @@
 from kafka import KafkaConsumer
 
-def consume_hello_world(bootstrap_servers, topic_name):
-    #Consumes messages from the specified Kafka topic and prints them at terminal.
+kafka_brokers = 'localhost:9092'  # Kafka broker address here is for local testing only
+topic = 'ABC'
+
+def consume_send_message(bootstrap_servers, topic_name):
+    # Consumes messages from the specified Kafka topic and prints them at the terminal.
 
     try:
         consumer = KafkaConsumer(
             topic_name,
             bootstrap_servers=bootstrap_servers,
-            auto_offset_reset='earliest',  # Start consuming from the beginning of the topic
+            auto_offset_reset='earliest',  # Start consuming the topic
             enable_auto_commit=True,
-            group_id='my-consumer-group',  # Assign a consumer group ID
+            group_id='my-consumer-group',
             value_deserializer=lambda x: x.decode('utf-8')
         )
 
@@ -24,6 +27,4 @@ def consume_hello_world(bootstrap_servers, topic_name):
             consumer.close()
 
 if __name__ == "__main__":
-    kafka_brokers = 'localhost:9092'  # Replace with your Kafka broker address if different
-    topic = 'ABC'
-    consume_hello_world(kafka_brokers, topic)
+    consume_send_message(kafka_brokers, topic)
