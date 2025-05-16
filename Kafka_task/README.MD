@@ -39,7 +39,7 @@ This section describes how to set up Kafka (using Docker) and run the publisher 
 
     python3 producer.py
 
-    This script will connect to the Kafka broker running on `localhost:9092` and send "HELLO WORLD" to the "ABC" topic.
+    This script will connect to the Kafka broker running on `localhost:9092` and send "Hllo World" to the "ABC" topic.
 
 ### Running the Consumer Script
 
