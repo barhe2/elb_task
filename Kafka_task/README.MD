@@ -9,14 +9,14 @@ This section describes how to set up Kafka (using Docker) and run the publisher 
 ### Prerequisites
 
 - **Docker:** You need to have Docker installed on your system.
-  # If Docker not installed use this commands (for Debian based OS):
-  # sudo apt update -y && sudo apt install docker.io
+  If Docker not installed use this commands (for Debian based OS):
+  **sudo apt update -y && sudo apt install docker.io**
 
 - **Python 3:** Python 3 should be installed on your system.
 - **pip:** pip is the package installer for Python and should be installed with Python.
 - **To pull and run Docker images, use the following commands.**
-# docker pull apache/kafka:4.0.0
-# docker run -p 9092:9092 apache/kafka:4.0.0
+**docker pull apache/kafka:4.0.0**
+**docker run -p 9092:9092 apache/kafka:4.0.0**
 
 ### Running the setup.sh Script
 
@@ -29,11 +29,11 @@ This section describes how to set up Kafka (using Docker) and run the publisher 
 
 ### Running the Publisher Script
 
-1.  **Activate "kafka_venv" with the following command: **
-# Linux/Mac : source kafka_venv/bin/activate
-# Windows : source kafka_venv/Scripts/activate
+1.  Activate "kafka_venv" with the following command:
+**Linux/Mac : source kafka_venv/bin/activate**
+****Windows : source kafka_venv/Scripts/activate**
 
-2.  **Move into "scripts" folder with # cd scripts
+2.  **Change diractory** into "scripts" with **cd /scripts**
 
 3.  **Run the publisher script:** Execute the script using the Python interpreter:
 
@@ -43,11 +43,11 @@ This section describes how to set up Kafka (using Docker) and run the publisher 
 
 ### Running the Consumer Script
 
-1.  **Activate "kafka_venv" with the following command: **
-# Linux/Mac : source kafka_venv/bin/activate
-# Windows : source kafka_venv/Scripts/activate
+1.  Activate "kafka_venv" with the following command:
+**Linux/Mac : source kafka_venv/bin/activate**
+****Windows : source kafka_venv/Scripts/activate**
 
-2.  **Move into "scripts" folder with # cd scripts
+2.  **Change diractory** into "scripts" with **cd /scripts**
 
 3.  **Run the consumer script:** Execute the script using the Python interpreter:
 
